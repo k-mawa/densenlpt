@@ -1,8 +1,8 @@
 # densenlpt  
 densenlpt is a python package for creating dictionary and vector from scentences &amp; training model to predict.  
   
-#Quick Start  
-###[1]MeCab and Dictionary for Mecab is required  
+# Quick Start  
+### [1]MeCab and Dictionary for Mecab is required  
 I recommend(in MAC OS X)  
 ```
 $brew install mecab-ipadic #this you can install MeCab at the same time.
@@ -13,23 +13,23 @@ $mecab -v
 mecab of 0.996 #messeage like this means MeCab works
 ```
   
-###[2]install densenlpt by pip  
+### [2]install densenlpt by pip  
 ```
 pip install densenlpt
 ```
   
-###[3]put 2type csv files including raw data.  
+### [3]put 2type csv files including raw data.  
 	1:sentences.csv : it contains scentences in one column with no-header to make dictionary  
 	2:data0.csv : it contains scentences in two column with no-header to make vector  
 		first column has scentences of training data  
 		second column has label which is int number  
   
-###[4]import classes  
+### [4]import classes  
 ```
 from densenlpt import Dict2dense,Predictor
 ```
   
-###[5]varience is fixed  
+### [5]varience is fixed  
 ```
 datapath = '.' 
 dictionary_save_path = '.' #save path of dictionary you will create with densenlpt
@@ -50,7 +50,7 @@ dict_filter=True
 """
 ```
   
-###[6]create object and create dictionaly and corpas  
+### [6]create object and create dictionaly and corpas  
 ```
 """
 create Dict2dense instance
@@ -75,7 +75,7 @@ if you load the dictionary again. you use this method.
 saved_dict = obj.load_dict() #load dictionary
 ```
   
-###[7]estimator initialize  
+### [7]estimator initialize  
 ```
 """
 create Predictor instance which can train and predict
@@ -96,7 +96,7 @@ modelobj.randomforestmodel_retrain(dense,train_label,dictionary,modelobj.estimat
 
 ```
   
-###[7]estimator prediction  
+### [8]estimator prediction  
 ```
 """
 put new words and scentences to model and get prediction
