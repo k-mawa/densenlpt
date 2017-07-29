@@ -109,3 +109,25 @@ words = '今日は笑顔で美味しい焼鮭定食がたべたい。めちゃ�
 answer = modelobj.onebyonepredict(words)
 print(answer[0]) #returned value is type of array.
 ```
+
+### [9]save estimator  
+```
+"""
+put path and you can save estimator
+before you do it, i would like you to make directory to save
+"""
+savepath ="<YOUR_SAVE_PATH>/"
+modelobj.randomforestmodel_save(modelobj.estimator,savepath)
+
+```
+
+### [10]load estimator  
+```
+"""
+put path and you can save estimator
+before you do it, i would like you to make directory to save
+"""
+loadpath ="<YOUR_LOAD_PATH>/"
+modelobj.randomforestmodel_load(loadpath)
+
+```

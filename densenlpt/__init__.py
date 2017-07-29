@@ -6,6 +6,7 @@ import os
 import sys
 import time
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.externals import joblib
 
 class Dict2dense:
 	def __init__(self, 
@@ -97,7 +98,7 @@ class Dict2dense:
 		print()
 		print("length of dense:",len(dense))
 		print("length of train_label:",len(train_label))
-		print("all procedure is successfly finished")
+		print("all procedure is successfully finished")
 
 		return dense, train_label, dictionary
 
@@ -121,6 +122,16 @@ class Predictor:
 		print("Random forest model initialized...")
 		self.estimator.fit(self.dense, self.train_label)
 		print("First-training of Random forest model is completed.")
+
+	def randomforestmodel_save(self, estimator=None, path=None):
+		save_path = path + 'estimator.pkl'
+		joblib.dump(self.estimator, save_path) 
+		print("existing model is saved successfully.")
+
+	def randomforestmodel_load(self, path=None):
+		load_path = path + 'estimator.pkl'
+		self.estimator = joblib.load(load_path) 
+		print("existing model is loaded successfully.")
 
 	def randomforestmodel_retrain(self,dense=None, train_label=None, dictionary=None, estimator=None):
 		self.estimator.fit(dense, train_label)
