@@ -2,7 +2,7 @@
 densenlpt is a python package for creating dictionary and vector from scentences &amp; training model to predict.  
   
   
-PYPI site  
+PYPI site is here
 https://pypi.python.org/pypi/densenlpt  
     
 # Quick Start  
