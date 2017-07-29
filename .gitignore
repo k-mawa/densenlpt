@@ -1,5 +1,5 @@
 __pycache__/
 *.DS_Store
 *.csv
-*.dist
-*.densenlpt.egg-info
+dist/
+densenlpt.egg-info/
