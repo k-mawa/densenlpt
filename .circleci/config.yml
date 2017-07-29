@@ -34,7 +34,7 @@ jobs:
             . venv/bin/activate
             sudo apt-get install mecab-ipadic
             pip install -r requirements.txt
-            pip install densenlpt
+            pip install densenlpt --upgrade
 
       - save_cache:
           paths:
