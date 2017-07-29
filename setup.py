@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import os
 
 name = 'densenlpt'
-version = '0.0.4'
+version = '0.0.5'
 
 try:
     with open('README.rst') as f:

@@ -81,8 +81,12 @@ class Dict2dense:
 		print("part of new dict contents")
 		print("===========")
 		print("word：ID")
-		for i in range(5):
-		    print(key_index[i],":",dictionary.token2id[key_index[i]])
+		try:
+			for i in range(5):
+				print(key_index[i],":",dictionary.token2id[key_index[i]])
+		except:
+			print("number of words is very small")
+
 		print("===========")
 		print()
 
@@ -122,6 +126,9 @@ class Predictor:
 		print("Random forest model initialized...")
 		self.estimator.fit(self.dense, self.train_label)
 		print("First-training of Random forest model is completed.")
+
+	def load_dict(self,dictionary_save_path=None):
+		return corpora.Dictionary.load_from_text(os.path.join(dictionary_save_path,'dictionary.txt'))
 
 	def randomforestmodel_save(self, estimator=None, path=None):
 		save_path = os.path.join(path,'estimator.pkl')
