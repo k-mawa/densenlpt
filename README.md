@@ -116,7 +116,7 @@ print(answer[0]) #returned value is type of array.
 put path and you can save estimator
 before you do it, i would like you to make directory to save
 """
-savepath ="<YOUR_SAVE_PATH>/"
+savepath ="<YOUR/SAVE/PATH>"
 modelobj.randomforestmodel_save(modelobj.estimator,savepath)
 
 ```
@@ -127,7 +127,7 @@ modelobj.randomforestmodel_save(modelobj.estimator,savepath)
 put path and you can save estimator
 before you do it, i would like you to make directory to save
 """
-loadpath ="<YOUR_LOAD_PATH>/"
+loadpath ="<YOUR/LOAD/PATH>"
 modelobj.randomforestmodel_load(loadpath)
 
 ```

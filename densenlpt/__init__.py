@@ -124,12 +124,17 @@ class Predictor:
 		print("First-training of Random forest model is completed.")
 
 	def randomforestmodel_save(self, estimator=None, path=None):
-		save_path = path + 'estimator.pkl'
+		save_path = os.path.join(path,'estimator.pkl')
+		if os.path.isdir(path):
+			pass
+		else:
+			os.makedirs(path)
+			print("save-path is not exist. save-path is created successfully.")
 		joblib.dump(self.estimator, save_path) 
 		print("existing model is saved successfully.")
 
 	def randomforestmodel_load(self, path=None):
-		load_path = path + 'estimator.pkl'
+		load_path = os.path.join(path,'estimator.pkl')
 		self.estimator = joblib.load(load_path) 
 		print("existing model is loaded successfully.")
 

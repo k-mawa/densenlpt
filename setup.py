@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import os
 
 name = 'densenlpt'
-version = '0.0.3'
+version = '0.0.4'
 
 try:
     with open('README.rst') as f:
@@ -23,7 +23,7 @@ setup(
     url='https://github.com/k-mawa/densenlpt',
     description=short_description,
     long_description=readme,
-    keywords=['nlp','gensim','machine','machine learning','scikit-learn','sklearn','mecab','natto'],
+    keywords=['mecab', 'gensim', 'machine', 'machine learning', 'scikit-learn', 'sklearn', 'nlp', 'natto'],
     packages=find_packages(),
     install_requires=read_from_file('requirements.txt'),
     author='Kosuke Mawatari',
