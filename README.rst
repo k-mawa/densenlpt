@@ -1,4 +1,4 @@
-`audiblerangepy` is a package for checking some frequency is audible or not for some human-being and animals
+`densenlpt` is a python package for creating dictionary and vector from scentences & training model to predict.  mainly it is used for Japanese Language Analysis
 
 Requirements
 ------------
@@ -11,6 +11,7 @@ Features
 History
 -------
 0.0.1 (2017-7-20)
+0.0.2 (2017-7-29)
 ~~~~~~~~~~~~~~~~~~
 * first release
 

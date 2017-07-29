@@ -1,6 +1,10 @@
 # densenlpt  
 densenlpt is a python package for creating dictionary and vector from scentences &amp; training model to predict.  
   
+  
+PYPI site  
+https://pypi.python.org/pypi/densenlpt  
+    
 # Quick Start  
 ### [1]MeCab and Dictionary for Mecab is required  
 I recommend(in MAC OS X)  
@@ -29,7 +33,7 @@ pip install densenlpt
 from densenlpt import Dict2dense,Predictor
 ```
   
-### [5]varience is fixed  
+### [5]fix variences  
 ```
 datapath = '.' 
 dictionary_save_path = '.' #save path of dictionary you will create with densenlpt
@@ -50,7 +54,7 @@ dict_filter=True
 """
 ```
   
-### [6]create object and create dictionaly and corpas  
+### [6]create object & create dictionary and corpus  
 ```
 """
 create Dict2dense instance
@@ -75,7 +79,7 @@ if you load the dictionary again. you use this method.
 saved_dict = obj.load_dict() #load dictionary
 ```
   
-### [7]estimator initialize  
+### [7]initialize and start training estimator   
 ```
 """
 create Predictor instance which can train and predict
@@ -96,7 +100,7 @@ modelobj.randomforestmodel_retrain(dense,train_label,dictionary,modelobj.estimat
 
 ```
   
-### [8]estimator prediction  
+### [8]predict by estimator  
 ```
 """
 put new words and scentences to model and get prediction
